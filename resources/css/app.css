@@ -1,0 +1,56 @@
+@import 'tailwindcss';
+@plugin 'daisyui';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.jsx';
+
+@font-face {
+    font-family: 'LilGrotesk-Bold';
+    font-weight: bold;
+    font-display: swap;
+    src: url('../fonts/LilGrotesk-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LilGrotesk-Regular';
+    font-weight: normal;
+    font-display: swap;
+    src: url('../fonts/LilGrotesk-Regular.ttf') format('truetype');
+}
+
+html {
+    font-size: 25px;
+}
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --font-lil-bold: 'LilGrotesk-Bold';
+    --font-lil-regular: 'LilGrotesk-Regular';
+
+    --fade-in: 1s ease-in-out;
+}
+
+@layer base {
+    :root {
+        --color-primary: #9e66ff;
+        --color-primary-content: #ffffff;
+    }
+}
+
+.fade-in {
+    animation: fadeIn var(--fade-in);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
